@@ -1,0 +1,103 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page base */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #111;
+  line-height: 1.5;
+  padding: 24px 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header, intro, footer blocks */
+.site-header,
+.site-footer,
+.intro {
+  max-width: 960px;
+  margin: 0 auto 32px auto;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.intro p {
+  font-size: 0.95rem;
+  max-width: 640px;
+}
+
+/* Gallery grid */
+.grid {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;               /* space between sections */
+}
+
+.grid-item {
+  background: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  margin-bottom: 12px;
+}
+
+.grid-item h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.grid-item p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Footer */
+.site-footer {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Responsive: 2 columns on tablets */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 4 columns on desktops */
+@media (min-width: 1024px) {
+  body {
+    padding: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
